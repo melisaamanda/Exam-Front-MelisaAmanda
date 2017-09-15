@@ -1,0 +1,29 @@
+<div class="container-fluid">
+  
+  <div class="">
+    <table class="table table-responsive">
+      <thead>
+        <tr class="active">
+          <th>No</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Address</th>
+          <th>Company</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+  
+       <tbody>
+        <tr *ngFor="let ul of this.api.UserList" class="info">
+          <td class="">{{ ul.id }}</td>
+          <td class="">{{ ul.name }}</td>
+          <td class="">{{ ul.email }}</td>
+          <td class="">{{ ul.address.street }}</td>
+          <td class="">{{ ul.company.name }},</td>
+          <button class="btn btn-danger" (click)="removeuser(ul.id)" >Remove</button>
+        </tr>
+       </tbody>
+    </table>
+  </div>
+  
+  </div>  

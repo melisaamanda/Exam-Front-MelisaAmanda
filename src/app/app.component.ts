@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  ChangeTab(UserList, AddUser) {
+    document.getElementById(UserList).classList.add('active');
+    document.getElementById(AddUser).classList.remove('active');
+
+    var e = (document.getElementById("abc")) as HTMLSelectElement;
+    var value = e.options[e.selectedIndex].text;
+
+  }
 }
